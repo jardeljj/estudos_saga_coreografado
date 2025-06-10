@@ -43,8 +43,8 @@ Toda a arquitetura é gerenciada via Docker Compose para facilitar a execução 
 ## ▶️ Como Rodar o Projeto
 1. **📥 Clone o repositório**
    ```sh
-   git clone https://github.com/jardeljj/estudos_Microsservicos.git
-   cd estudos_Microsservicos
+   git clone https://github.com/jardeljj/estudos_saga_coreografado
+   cd estudos_saga_coreografado
    ```
 
 2. **🐳 Suba os containers**
