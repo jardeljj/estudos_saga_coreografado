@@ -34,14 +34,17 @@ public class kafkaConfig {
     @Value("${spring.kafka.consumer.auto-offset-reset}")
     private String autoOffsetReset;
 
-    @Value("${spring.kafka.topic.orchestrator}")
-    private String orchestratorTopic;
-
     @Value("${spring.kafka.topic.payment-success}")
     private String paymentSuccessTopic;
 
     @Value("${spring.kafka.topic.payment-fail}")
     private String PaymentFailTopic;
+
+    @Value("${spring.kafka.topic.inventory-success}")
+    private String inventorySuccessTopic;
+
+    @Value("${spring.kafka.topic.product-validation-fail}")
+    private String ProductValidationFailTopic;
 
     @Bean
     public ConsumerFactory<String, String> consumerFactory(){
@@ -85,11 +88,6 @@ public class kafkaConfig {
     }
 
     @Bean
-    public NewTopic orchestratorTopic(){
-        return buildTopic(orchestratorTopic);
-    }
-
-    @Bean
     public NewTopic paymentSuccessTopic(){
         return buildTopic(paymentSuccessTopic);
     }
@@ -97,6 +95,16 @@ public class kafkaConfig {
     @Bean
     public NewTopic PaymentFailTopic(){
         return buildTopic(PaymentFailTopic);
+    }
+
+    @Bean
+    public NewTopic inventorySuccessTopic(){
+        return buildTopic(inventorySuccessTopic);
+    }
+
+    @Bean
+    public NewTopic ProductValidationFailTopic(){
+        return buildTopic(ProductValidationFailTopic);
     }
 
 }
