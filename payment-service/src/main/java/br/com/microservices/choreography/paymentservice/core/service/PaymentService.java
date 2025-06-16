@@ -42,7 +42,7 @@ public class PaymentService {
             log.error("Error trying to make payment: ", ex);
             handleFailCurrentNotExecuted(event, ex.getMessage());
         }
-        producer.sendEvent(jsonUtil.toJson(event));
+        producer.sendEvent(jsonUtil.toJson(event), "");
     }
 
     private void checkCurrentValidation(Event event) {
@@ -131,7 +131,7 @@ public class PaymentService {
         } catch (Exception ex) {
             addHistory(event, "Rollback not executed for payment: ".concat(ex.getMessage()));
         }
-        producer.sendEvent(jsonUtil.toJson(event));
+        producer.sendEvent(jsonUtil.toJson(event), "");
     }
 
     private void changePaymentStatusToRefund(Event event) {

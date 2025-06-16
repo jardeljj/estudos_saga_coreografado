@@ -39,7 +39,7 @@ public class ProductValidationService {
             log.error("Error trying to validate products: ", ex);
             handleFailCurrentNotExecuted(event, ex.getMessage());
         }
-        producer.sendEvent(jsonUtil.toJson(event));
+        producer.sendEvent(jsonUtil.toJson(event), "");
     }
 
     private void validateProductsInformed(Event event) {
@@ -119,7 +119,7 @@ public class ProductValidationService {
         event.setStatus(FAIL);
         event.setSource(CURRENT_SOURCE);
         addHistory(event, "Rollback executed on product validation!");
-        producer.sendEvent(jsonUtil.toJson(event));
+        producer.sendEvent(jsonUtil.toJson(event), "");
     }
 
     private void changeValidationToFail(Event event) {
