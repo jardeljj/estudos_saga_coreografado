@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class JsonUtil {
 
     private final ObjectMapper objectMapper;
-    public static String toJson(Object object){
+    public String toJson(Object object){
         try {
             return objectMapper.writeValueAsString(object);
         } catch ( Exception ex){

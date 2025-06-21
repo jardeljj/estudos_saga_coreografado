@@ -58,7 +58,7 @@ public class SagaExecutionController {
     }
 
     private void sendEvent(Event event, String topic){
-        var json = JsonUtil.toJson(event);
+        var json = jsonUtil.toJson(event);
         producer.sendEvent(json, topic);
     }
 
