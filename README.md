@@ -1,4 +1,4 @@
-# 📌 Estudos sobre Microsserviços com Padrão Saga e Transações Distribuídas
+# 📌 Convertendo o projeto Saga Orquestrado para Saga Coreografado
 
 ## 📖 Sobre o Projeto
 Este repositório tem como objetivo estudar e aplicar conceitos avançados de arquitetura de microsserviços, com foco em transações distribuídas e implementação do padrão Saga, tanto na abordagem orquestrada quanto coreografada. Através de um projeto prático com Java 17, Spring Boot 3, Apache Kafka, PostgreSQL e MongoDB, são exploradas boas práticas e estratégias para garantir consistência e resiliência em sistemas distribuídos.
@@ -15,13 +15,11 @@ Este repositório tem como objetivo estudar e aplicar conceitos avançados de ar
 ## O que será aplicado
 
 - 📚 Conceitos e estratégias para tratamento de transações distribuídas
-- 🤖 Implementação do padrão Saga Orquestrado com Java, Spring Boot e Kafka
+- 🤖 Implementação do padrão Saga coreografado com Java, Spring Boot e Kafka
 - 🎭 Diferenças entre os padrões Orquestrado vs. Coreografado
 - 🧱 Boas práticas na arquitetura de microsserviços
-- 🔀 Utilização de Apache Kafka na orquestração de eventos
 - 🗃️ Integração com bancos de dados PostgreSQL e MongoDB
 - 🧪 Tratamento de falhas em ambientes distribuídos
-- 🛠️ Utilização do padrão Outbox
 - 🎁 Seção bônus com implementação do padrão Saga Coreografado
 
 ## 🏗️ Arquitetura
@@ -62,7 +60,7 @@ Toda a arquitetura é gerenciada via Docker Compose para facilitar a execução 
 - [🍃 MongoDB Docs](https://www.mongodb.com/pt-br/docs/)
 
 ## 🚧 Status do Projeto
-🚀 Em andamento 🚧
+🚀 Finalizado ✅
 
 -JardelDev
 
